@@ -1,0 +1,64 @@
+# Project: graphics
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o Tetris.o Function.o Menu.o Game.o Save.o Animation.o Special.o
+LINKOBJ  = libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o Tetris.o Function.o Menu.o Game.o Save.o Animation.o Special.o
+LIBS     = -L"E:/DevCpp/Dev-Cpp/MinGW64/lib32" -L"E:/DevCpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -mwindows -m32 -g3
+INCS     = -I"E:/DevCpp/Dev-Cpp/MinGW64/include" -I"E:/DevCpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/DevCpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"./include"
+CXXINCS  = -I"E:/DevCpp/Dev-Cpp/MinGW64/include" -I"E:/DevCpp/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"E:/DevCpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"E:/DevCpp/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"./include"
+BIN      = graphics.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+libgraphics/exceptio.o: libgraphics/exceptio.c
+	$(CC) -c libgraphics/exceptio.c -o libgraphics/exceptio.o $(CFLAGS)
+
+libgraphics/genlib.o: libgraphics/genlib.c
+	$(CC) -c libgraphics/genlib.c -o libgraphics/genlib.o $(CFLAGS)
+
+libgraphics/graphics.o: libgraphics/graphics.c
+	$(CC) -c libgraphics/graphics.c -o libgraphics/graphics.o $(CFLAGS)
+
+libgraphics/random.o: libgraphics/random.c
+	$(CC) -c libgraphics/random.c -o libgraphics/random.o $(CFLAGS)
+
+libgraphics/simpio.o: libgraphics/simpio.c
+	$(CC) -c libgraphics/simpio.c -o libgraphics/simpio.o $(CFLAGS)
+
+libgraphics/strlib.o: libgraphics/strlib.c
+	$(CC) -c libgraphics/strlib.c -o libgraphics/strlib.o $(CFLAGS)
+
+Tetris.o: Tetris.c
+	$(CC) -c Tetris.c -o Tetris.o $(CFLAGS)
+
+Function.o: Function.c
+	$(CC) -c Function.c -o Function.o $(CFLAGS)
+
+Menu.o: Menu.c
+	$(CC) -c Menu.c -o Menu.o $(CFLAGS)
+
+Game.o: Game.c
+	$(CC) -c Game.c -o Game.o $(CFLAGS)
+
+Save.o: Save.c
+	$(CC) -c Save.c -o Save.o $(CFLAGS)
+
+Animation.o: Animation.c
+	$(CC) -c Animation.c -o Animation.o $(CFLAGS)
+
+Special.o: Special.c
+	$(CC) -c Special.c -o Special.o $(CFLAGS)
