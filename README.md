@@ -1,5 +1,7 @@
 # Tetris
 
+Wirtten in C, with 'libgraphics' library.
+
 Only support keyboard input:
 
 | Key   | Usage                   |
