@@ -21,3 +21,16 @@ Specially, we provide golden finger as follow:
 | 3     | corrosion virus                                              |
 | 2     | change the current block                                     |
 | 1     | stop the time                                                |
+
+## Results
+
+![](https://github.com/SuikaSibyl/GoldenFingerTetris/blob/master/figs/menu.png)
+
+
+![](https://github.com/SuikaSibyl/GoldenFingerTetris/blob/master/figs/game.png)
+
+
+![](https://github.com/SuikaSibyl/GoldenFingerTetris/blob/master/figs/goldenfinger.png)
+
+
+![](https://github.com/SuikaSibyl/GoldenFingerTetris/blob/master/figs/ranking.png)
